@@ -4,7 +4,7 @@
  * @invite NYvWdN5
  * @donate https://paypal.me/lighty13
  * @website https://1lighty.github.io/BetterDiscordStuff/?plugin=BetterImageViewer
- * @source https://github.com/1Lighty/BetterDiscordPlugins/blob/master/Plugins/BetterImageViewer/BetterImageViewer.plugin.js
+ * @source https://github.com/senymama/BetterDiscordPlugins/blob/master/Plugins/BetterImageViewer/BetterImageViewer.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -52,7 +52,7 @@ module.exports = (() => {
       ],
       version: '1.6.4',
       description: 'Перемещайтесь между изображениями во всем канале с помощью клавиш со стрелками, масштабирование изображения включается нажатием и удержанием, колесо прокрутки для увеличения и уменьшения масштаба, удерживайте Shift для изменения размера линзы. Предварительный просмотр изображений будет выглядеть более четким независимо от того, какое у вас масштабирование, и будет занимать как можно больше места. Перевод от Ser0p4ik',      github: 'https://github.com/1Lighty',
-      github_raw: 'https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/BetterImageViewer/BetterImageViewer.plugin.js'
+      github_raw: 'https://raw.githubusercontent.com/senymama/BetterDiscordPlugins/blob/master/Plugins/BetterImageViewer/BetterImageViewer.plugin.js'
     },
     changelog: [
       {
