@@ -1,13 +1,15 @@
-# BetterDiscordPlugins
-#### Info
-All of these plugins are developed by me (Lighty), unless otherwise stated.
-If you require support for any of these plugins, join my Discord server.
-https://discord.gg/NYvWdN5
-All of these plugins are available for easy downloading on my website.
-https://1lighty.github.io/BetterDiscordStuff/
-If you like these plugins, consider donating!
+# Плагины для BetterDiscord
+#### Информация
+If you need en version go to [origial page](https://github.com/1Lighty/BetterDiscordPlugins).
+Все плагины разработанны [Lighty](https://github.com/1Lighty), Если не указанно иное.
+Переводом занимался непосредстевенно [я](https://github.com/senymama) (senymama).
+Если вам требуется поддержка любого из этих плагинов, присоединяйтесь к [серверу Discord создателя](https://discord.gg/NYvWdN5).
+Все плагины доступны для загрузки на [сайте создателя](https://1lighty.github.io/BetterDiscordStuff/).
+Если вам нравятся эти плагины, рассмотрите возможность пожертвования Автору !
 
+Автору:
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L01A2WY) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/lighty13)
+
 ## [BetterImageViewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer "BetterImageViewer")
 Move between images in the entire channel with arrow keys, image zoom enabled by clicking and holding, scroll wheel to zoom in and out, hold shift to change lens size. Image previews will look sharper no matter what scaling you have, and will take up as much space as possible.
 
