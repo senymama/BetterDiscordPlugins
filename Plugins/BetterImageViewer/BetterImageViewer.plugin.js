@@ -34,7 +34,7 @@ module.exports = (() => {
   /* Setup */
   const config = {
     main: 'index.js',
-    info: {
+    "info": {
       name: 'BetterImageViewer',
       authors: [
         {
@@ -42,63 +42,68 @@ module.exports = (() => {
           discord_id: '239513071272329217',
           github_username: '1Lighty',
           twitter_username: ''
-        }
+        },
+		{
+		  name: 'Ser0p4ik',
+          discord_id: '494358942202331146',
+          github_username: 'senymama',
+          twitter_username: ''
+		}
       ],
       version: '1.6.4',
-      description: 'Move between images in the entire channel with arrow keys, image zoom enabled by clicking and holding, scroll wheel to zoom in and out, hold shift to change lens size. Image previews will look sharper no matter what scaling you have, and will take up as much space as possible.',
-      github: 'https://github.com/1Lighty',
+      description: 'Перемещайтесь между изображениями во всем канале с помощью клавиш со стрелками, масштабирование изображения включается нажатием и удержанием, колесо прокрутки для увеличения и уменьшения масштаба, удерживайте Shift для изменения размера линзы. Предварительный просмотр изображений будет выглядеть более четким независимо от того, какое у вас масштабирование, и будет занимать как можно больше места. Перевод от Ser0p4ik',      github: 'https://github.com/1Lighty',
       github_raw: 'https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/BetterImageViewer/BetterImageViewer.plugin.js'
     },
     changelog: [
       {
-        title: 'HOTFIX',
-        type: 'fixed',
-        items: ['Removed use of deprecated API.']
+        title: 'Перевод',
+        type: 'translate',
+        items: ['Плагин был полностью переведён на русский язык.']
       }
     ],
     defaultConfig: [
       {
         type: 'category',
         id: 'ui',
-        name: 'UI settings',
+        name: 'Настройки пользовательского интерфейса',
         collapsible: true,
         shown: true,
         settings: [
           {
-            name: 'Show image index and number of images left (estimated)',
+            name: 'Показать индекс изображения и количество оставшихся изображений (приблизительно)',
             id: 'imageIndex',
             type: 'switch',
             value: true
           },
           {
-            name: 'Show navigation buttons',
+            name: 'Показать кнопки навигации',
             id: 'navButtons',
             type: 'switch',
             value: true
           },
           {
-            name: 'Show image filename',
+            name: 'Показать имя файла изображения',
             id: 'infoFilename',
             type: 'switch',
             value: true
           },
           {
-            name: 'Show image resolution',
-            note: 'Left is downscaled, right is original',
+            name: 'Показать разрешение изображения',
+            note: 'Слева уменьшено, справа оригинально',
             id: 'infoResolution',
             type: 'switch',
             value: true
           },
           {
-            name: 'Show image size',
-            note: 'Left is downscaled, right is original, ~ means they\'re the same',
+            name: 'Показать размер изображения',
+            note: 'Слева уменьшено, справа исходно, ~ означает, что они одинаковые',
             id: 'infoSize',
             type: 'switch',
             value: true
           },
           {
-            name: 'Always load full resolution image',
-            note: 'You won\'t notice a difference. You can also force it to load the full resolution image by ctrl + clicking the image preview. the first resolution on bottom right will turn red when it\'s enabled.',
+            name: 'Всегда загружать изображение с полным разрешением',
+            note: 'Вы не заметите разницы. Вы также можете заставить его загрузить изображение в полном разрешении, нажав Ctrl + щелчок по предварительному просмотру изображения. первое разрешение внизу справа станет красным, когда оно включено.',
             id: 'loadFull',
             type: 'switch',
             value: false
@@ -108,26 +113,26 @@ module.exports = (() => {
       {
         type: 'category',
         id: 'behavior',
-        name: 'Behavior settings',
+        name: 'Настройки поведения',
         collapsible: true,
         shown: false,
         settings: [
           {
-            name: 'Use search API',
-            note: 'Without this, you\'ll only be able to view images currently cached in Discord.',
+            name: 'Используйте поисковый API',
+            note: 'Без этого вы сможете только просматривать изображения, кэшированные в данный момент в Discord.',
             id: 'searchAPI',
             type: 'switch',
             value: true
           },
           {
-            name: 'Trigger search when hovering over navigation buttons when needed',
+            name: 'Запуск поиска при наведении курсора на кнопки навигации, когда это необходимо',
             id: 'hoverSearch',
             type: 'switch',
             value: false
           },
           {
-            name: 'DEBUG',
-            note: 'do not touch',
+            name: 'Режим ОТЛАДКИ',
+            note: 'не трогай!',
             id: 'debug',
             type: 'switch',
             value: false
@@ -137,18 +142,18 @@ module.exports = (() => {
       {
         type: 'category',
         id: 'chat',
-        name: 'Chat image settings',
+        name: 'Настройки изображения чата',
         collapsible: true,
         shown: false,
         settings: [
           {
-            name: 'Scale images to be sharper',
+            name: 'Масштабируйте изображения, чтобы они были более четкими',
             id: 'scale',
             type: 'switch',
             value: true
           },
           {
-            name: 'Resize images to take up more space',
+            name: 'Измените размер изображений, чтобы они занимали больше места',
             id: 'resize',
             type: 'switchbeta',
             value: false
@@ -158,65 +163,65 @@ module.exports = (() => {
       {
         type: 'category',
         id: 'zoom',
-        name: 'Image Zoom settings',
+        name: 'Настройки масштабирования изображения',
         collapsible: true,
         shown: false,
         settings: [
           {
-            name: 'Enable image zoom',
+            name: 'Включить масштабирование изображения',
             id: 'enabled',
             type: 'switch',
             value: true
           },
           {
-            name: 'Zoom enable mode',
+            name: 'Режим включения масштабирования',
             id: 'enableMode',
             type: 'radio',
             value: 0,
             options: [
-              { name: 'Click and hold', value: 0 },
-              { name: 'Click to toggle', value: 1 },
-              { name: 'Scroll to toggle', value: 2 }
+              { name: 'Нажиатие и удерживание', value: 0 },
+              { name: 'Нажмите, чтобы переключить', value: 1 },
+              { name: 'Прокрутите, чтобы переключить', value: 2 }
             ]
           },
           {
-            name: 'Anti-aliasing',
-            note: 'On low resolution images, pixels become blurry',
+            name: 'Сглаживание',
+            note: 'На изображениях с низким разрешением пиксели становятся размытыми',
             id: 'interp',
             type: 'switch',
             value: true
           },
           {
-            name: 'Round lens',
-            note: 'why',
+            name: 'Круглая линза',
+            note: 'Зачем?',
             id: 'round',
             type: 'switch',
             value: true
           },
           {
-            name: 'Allow lens to go out of bounds',
-            note: 'Allows the lens to go beyond the border of the image',
+            name: 'Разрешить линзе выходить за пределы',
+            note: 'Позволяет линзе выходить за границу изображения',
             id: 'outOfBounds',
             type: 'switch',
             value: false
           },
           {
-            name: 'Allow lens to clip out of view',
-            note: 'Allows the lens to go beyond the window',
+            name: 'Разрешить линзе выходить из поля зрения',
+            note: 'Позволяет линзе выходить за пределы окна',
             id: 'outOfScreen',
             type: 'switch',
             value: true
           },
           {
-            name: 'Movement smoothing',
-            note: 'Not recommended to disable. Smooths out movement and zoom',
+            name: 'Сглаживание движения',
+            note: 'Не рекомендуется отключать. Сглаживает движение и масштабирование',
             id: 'smoothing',
             type: 'switch',
             value: true
           },
           {
-            name: 'Zoom multiplier factor',
-            note: 'If it zooms too fast or too slow, you can adjust it',
+            name: 'Множитель масштабирования',
+            note: 'Если масштабирование слишком быстрое или слишком медленное, вы можете отрегулировать его',
             id: 'zoomMultiplier',
             type: 'slider',
             value: 10,
@@ -226,8 +231,8 @@ module.exports = (() => {
             stickToMarkers: true
           },
           {
-            name: 'Unlock zoom',
-            note: 'Disables the maximum zoom limit',
+            name: 'Отключить ограничение зума',
+            note: 'Отключает ограничение максимального увеличения',
             id: 'noLimits',
             type: 'switch',
             value: false
